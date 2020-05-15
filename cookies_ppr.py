@@ -1,0 +1,18 @@
+import json
+cookies = [{'domain': 'www.jd.com', 'expiry': 1592055784, 'httpOnly': False, 'name': 'o2Control', 'path': '/', 'secure': False, 'value': 'webp|lastvisit=14'}, {'domain': '.jd.com', 'expiry': 1563111783.81344, 'httpOnly': False, 'name': 'pin', 'path': '/', 'secure': False, 'value': 'lvmingfu007'}, {'domain': '.jd.com', 'expiry': 1576071784, 'httpOnly': False, 'name': '__jda', 'path': '/', 'secure': False, 'value': '122270672.15605197790801350824702.1560519779.1560519779.1560519779.1'}, {'domain': '.jd.com', 'httpOnly': False, 'name': '__jdc', 'path': '/', 'secure': False, 'value': '122270672'}, {'domain': '.jd.com', 'expiry': 1592055783.81342, 'httpOnly': False, 'name': 'pinId', 'path': '/', 'secure': False, 'value': 'UvfQJJz7sNS0NN1t7pSxuQ'}, {'domain': '.jd.com', 'expiry': 1718199783.813379, 'httpOnly': False, 'name': 'TrackID', 'path': '/', 'secure': False, 'value': '1UTTmcxGTTlpbIg2UiRLv6Ks8SV8FSpnnHQ2nWywQGfxdW9sLm1P-vK2d-Li5pa4_s6qQsi3XifeQDkH-Yx9bgA'}, {'domain': '.jd.com', 'expiry': 1561815779, 'httpOnly': False, 'name': '__jdv', 'path': '/', 'secure': False, 'value': '122270672|direct|-|none|-|1560519779081'}, {'domain': '.jd.com', 'expiry': 1576071784.021958, 'httpOnly': False, 'name': '__jdu', 'path': '/', 'secure': False, 'value': '15605197790801350824702'}, {'domain': '.jd.com', 'httpOnly': True, 'name': 'thor', 'path': '/', 'secure': False, 'value': '8647BD89F78A613B9059E3698E87F122182CBF6536F05DCAA92EFD9B7B16FEA3282FBF0036B7B632D108DEB61CEB52DE1584568AEB296E5C54EC9427B2E8B62974775394F55699CB9A035D9705C0076C1722758ABB6AFB398BC6F932753F3D9C64FE48FD3C16CE1CF5B27C3B541AE38AC80A2AD983A7A0D35DAC2BD6BAB520F2F2A0F7C5870AF27A2CB09119EF9E9494'}, {'domain': '.jd.com', 'expiry': 1563111783.81346, 'httpOnly': True, 'name': 'unick', 'path': '/', 'secure': False, 'value': 'jdlvminglaq'}, {'domain': '.jd.com', 'httpOnly': False, 'name': 'ceshi3.com', 'path': '/', 'secure': False, 'value': '201'}, {'domain': '.jd.com', 'expiry': 1563111783.813494, 'httpOnly': False, 'name': '_tp', 'path': '/', 'secure': False, 'value': 'OaR0UQFMBTAtJCDMThPOtw%3D%3D'}, {'domain': '.jd.com', 'expiry': 1563111783.813527, 'httpOnly': True, 'name': '_pst', 'path': '/', 'secure': False, 'value': 'lvmingfu007'}, {'domain': '.jd.com', 'expiry': 1561383784, 'httpOnly': False, 'name': 'ipLoc-djd', 'path': '/', 'secure': False, 'value': '12-904-905'}, {'domain': '.jd.com', 'expiry': 1560521584, 'httpOnly': False, 'name': '__jdb', 'path': '/', 'secure': False, 'value': '122270672.3.15605197790801350824702|1.1560519779'}, {'domain': '.jd.com', 'expiry': 1561383784, 'httpOnly': False, 'name': 'areaId', 'path': '/', 'secure': False, 'value': '12'}, {'domain': '.jd.com', 'expiry': 2424519784, 'httpOnly': False, 'name': 'shshshfpb', 'path': '/', 'secure': False, 'value': 'oFdbiVvnxlO6O3DK0uYpvdA%3D%3D'}, {'domain': '.jd.com', 'expiry': 1561383783.538168, 'httpOnly': False, 'name': 'PCSYCityID', 'path': '/', 'secure': False, 'value': '904'}, {'domain': '.jd.com', 'expiry': 2424519784, 'httpOnly': False, 'name': 'shshshfp', 'path': '/', 'secure': False, 'value': '2d4b870bfc047949b876bd47b64b346b'}, {'domain': '.jd.com', 'expiry': 2424519784, 'httpOnly': False, 'name': 'shshshfpa', 'path': '/', 'secure': False, 'value': 'dff2c6a6-a127-8522-218e-6f6a021e237f-1560519784'}, {'domain': '.jd.com', 'expiry': 1560521584, 'httpOnly': False, 'name': 'shshshsID', 'path': '/', 'secure': False, 'value': 'a9025d74c01d64586b20e5710d1583c5_1_1560519784847'}]
+
+a = cookies[0]
+cookie_dic = {}
+for cookie in cookies:
+	cookie_dic[cookie.get('name')] = cookie.get('value')
+b = json.dumps(cookie_dic)
+
+c = json.loads(b)
+print(cookie_dic)
+print('='*20)
+print(b)
+print('='*20)
+print(type(b))
+print(c)
+print('='*20)
+print(type(c))
